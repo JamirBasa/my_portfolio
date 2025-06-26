@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Basa | Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com ">
+    <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="#home">Dave Jamir Basa</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#works">Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <div class="section-container">
+                <div class="welcome-text">
+                    <h1>Welcome to<br>My website</h1>
+                    <p>I am a web developer and UI/UX designer. I want to create something meaningful for the society.</p>
+                </div>
+                <div class="avatar">
+                    <img src="./img/djb1.jpg" alt="Dave Jamir Basa">
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="section">
+            <div class="section-container">
+                <h2 class="section-title">My Works</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="./projects/DentalFinder.PNG" alt="Dental Finder" class="project-img">
+                            <div class="project-title">DentalFinder</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./projects/Texify1.PNG" alt="Texify" class="project-img">
+                            <div class="project-title">Texify</div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./img/djb2.jpg" alt="Dave Jamir Basa">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Hello! I am Dave Jamir Basa, a lifelong learner of web development and UI/UX design. I create responsive and user-friendly websites. I specialize in front-end development with HTML, CSS, and JavaScript, as well as UI/UX design using Figma and Canva. 
+                            My goal is to build websites that look excellent and are user-friendly.
+                        </p>
+                        
+                        <button id="education-btn" class="toggle-btn">
+                            <span>Education</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
+                        <div id="education-content" class="toggle-content">
+                            <div class="education-item">
+                                <h4>Bachelor of Science in Computer Science</h4>
+                                <p class="education-institution">Western Mindanao State University</p>
+                                <p class="education-year">2022 - Present</p>
+                            </div>
+                            <div class="education-item">
+                                <h4>Leadership 113</h4>
+                                <p class="education-institution">Victory Zamboanga</p>
+                                <p class="education-year">2024</p>
+                                <p>Completed a 10-month leadership development course focused on enhancing leadership effectiveness in ministry and group settings.</p>
+                                <p>Gained practical skills in team leadership, mentoring, and spiritual guidance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills">
+                            <h3>Skills</h3>
+                            <h4>Programming</h4>
+                            <ul class="programming-skills">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>PHP</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <h4>Software</h4>
+                            <ul class="software-skills">
+                                <li>Figma</li>
+                                <li>Canva</li>
+                                <li>Excel</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-column">
+                        <h3>Get In Touch</h3>
+                        <p>Feel free to reach out if you're interested in working together or have any questions.</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> basajamir@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +63 9656987573</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Zamboanga City, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="contact-column">
+                        <h3>Connect With Me</h3>
+                        <p>Feel free to connect with me on my social media.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/jamir-basa-b37ab3369/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/JamirBasa" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://web.facebook.com/JAAAAAAAAAAMIR" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dave Jamir Basa. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for project details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Project">
+            <div id="modal-details">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
