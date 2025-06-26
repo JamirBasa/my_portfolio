@@ -103,7 +103,7 @@ header {
     object-position: center;
 }
 
-/* Minimalist Theme Toggle Button */
+
 .theme-toggle {
     position: fixed;
     bottom: 30px;
@@ -165,7 +165,6 @@ header {
     transform: scale(1);
 }
 
-/* Mobile Navigation - Burger Menu */
 .burger-menu {
     display: none;
     cursor: pointer;

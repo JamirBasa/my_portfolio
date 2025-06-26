@@ -89,7 +89,7 @@
     box-shadow: 0 5px 10px var(--shadow-color);
 }
 
-/* Responsive Design for Contact Section */
+
 @media (max-width: 768px) {
     .contact-content {
         flex-direction: column;
