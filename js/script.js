@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "DentalFinder",
             description: "DentalFinder is a platform for service provider and customer to create a seamless booking experience wherein they manage bookings and book an appointment. The project was built using HTML, CSS, PHP and JavaScript.",
-            image: "./projects/DentalCare.png"
+            image: "./projects/DentalFinder.png"
         },
         {
             title: "Texify",
@@ -141,11 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.carousel-item').forEach((item, index) => {
         item.addEventListener('click', () => {
             if (projects[index]) {
-                modalImage.src = projects[index].image;
+                // Get the image path from the current carousel item
+                const imgElement = item.querySelector('img');
+                modalImage.src = imgElement.src;
                 modalTitle.textContent = projects[index].title;
                 modalDescription.textContent = projects[index].description;
                 modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                document.body.style.overflow = 'hidden'; 
             }
         });
     });
@@ -153,14 +155,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal when clicking the X
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflow = 'auto'; 
     });
     
     // Close modal when clicking outside the modal content
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto'; 
         }
     });
     
