@@ -493,6 +493,7 @@ footer p {
     margin-top: 60px;
     padding-top: 40px;
     border-top: 1px solid var(--border-color);
+    text-align: center;
 }
 
 .about-author-section h3 {
@@ -511,12 +512,15 @@ footer p {
     width: 60px;
     height: 3px;
     background-color: var(--accent-color);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .about-author-content {
     display: flex;
     align-items: center;
     gap: 30px;
+    justify-content: center;
 }
 
 .about-author-image {
@@ -530,6 +534,8 @@ footer p {
 
 .about-author-bio {
     flex: 1;
+    text-align: center;
+    max-width: 600px;
 }
 
 .about-author-bio h4 {
@@ -549,12 +555,12 @@ footer p {
         text-align: center;
     }
     
-    .about-author-section h3:after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
     .about-author-image {
         margin-bottom: 20px;
+    }
+    
+    .about-author-bio {
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
