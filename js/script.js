@@ -62,6 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
             educationContent.classList.toggle('show');
         });
     }
+    
+    // Others toggle functionality
+    const othersBtn = document.getElementById('others-btn');
+    const othersContent = document.getElementById('others-content');
+    
+    if (othersBtn && othersContent) {
+        othersBtn.addEventListener('click', () => {
+            othersBtn.classList.toggle('active');
+            othersContent.classList.toggle('show');
+        });
+    }
 
     // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -166,63 +177,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Enhanced contact form submission with AJAX
-    const contactForm = document.getElementById('contact-form');
-    const formResponse = document.getElementById('form-response');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get the submit button
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            
-            // Show loading state
-            submitBtn.classList.add('loading');
-            submitBtn.disabled = true;
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            
-            // Send AJAX request
-            fetch('process_contact.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Show response message
-                formResponse.textContent = data.message;
-                formResponse.className = 'form-response ' + (data.success ? 'success' : 'error');
-                
-                // Reset form if successful
-                if (data.success) {
-                    contactForm.reset();
-                }
-                
-                // Hide loading state
-                submitBtn.classList.remove('loading');
-                submitBtn.disabled = false;
-                
-                // Scroll to response message
-                formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                
-                // Hide success message after 5 seconds
-                if (data.success) {
-                    setTimeout(() => {
-                        formResponse.style.display = 'none';
-                    }, 5000);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                formResponse.textContent = 'An unexpected error occurred. Please try again later.';
-                formResponse.className = 'form-response error';
-                
-                // Hide loading state
-                submitBtn.classList.remove('loading');
-                submitBtn.disabled = false;
-            });
-        });
-    }
 });
